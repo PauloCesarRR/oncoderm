@@ -1,6 +1,5 @@
 package com.oncoderm.spring.domain.usuario;
 
-import com.oncoderm.spring.dtos.UsuarioDTO;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,4 +1,4 @@
-package com.oncoderm.spring.dtos;
+package com.oncoderm.spring.domain.exame;
 
 import com.oncoderm.spring.domain.usuario.Usuario;
 

@@ -1,4 +1,4 @@
-package com.oncoderm.spring.dtos;
+package com.oncoderm.spring.domain.diagnostico;
 
 import com.oncoderm.spring.domain.estagio.Estagio;
 import com.oncoderm.spring.domain.exame.Exame;

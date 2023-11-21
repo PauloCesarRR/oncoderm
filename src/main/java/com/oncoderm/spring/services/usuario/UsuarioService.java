@@ -1,7 +1,7 @@
 package com.oncoderm.spring.services.usuario;
 
 import com.oncoderm.spring.domain.usuario.Usuario;
-import com.oncoderm.spring.dtos.UsuarioDTO;
+import com.oncoderm.spring.domain.usuario.UsuarioDTO;
 import com.oncoderm.spring.factories.UsuarioFactory;
 import com.oncoderm.spring.repositories.IUsuarioRepository;
 import com.oncoderm.spring.utils.Utils;
@@ -45,6 +45,11 @@ public class UsuarioService implements IUsuarioService{
     @Override
     public Usuario getById(Integer id) throws Exception {
         return this.repository.findById(id).orElseThrow(() -> new Exception("Usuário não encontrado"));
+    }
+
+    @Override
+    public Usuario getByEmail(String email) throws Exception {
+        return this.repository.findByEmail(email);
     }
 
     @Override

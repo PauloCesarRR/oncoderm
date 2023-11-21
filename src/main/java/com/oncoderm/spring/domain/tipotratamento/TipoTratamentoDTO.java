@@ -1,4 +1,4 @@
-package com.oncoderm.spring.dtos;
+package com.oncoderm.spring.domain.tipotratamento;
 
 public record TipoTratamentoDTO(String nome, String descricao) {
 }

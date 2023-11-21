@@ -1,7 +1,7 @@
 package com.oncoderm.spring.controllers;
 
 import com.oncoderm.spring.domain.usuario.Usuario;
-import com.oncoderm.spring.dtos.UsuarioDTO;
+import com.oncoderm.spring.domain.usuario.UsuarioDTO;
 import com.oncoderm.spring.services.usuario.IUsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

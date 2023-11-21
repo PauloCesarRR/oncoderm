@@ -1,4 +1,4 @@
-package com.oncoderm.spring.dtos;
+package com.oncoderm.spring.domain.tipocancer;
 
 import com.oncoderm.spring.domain.prevencao.Prevencao;
 

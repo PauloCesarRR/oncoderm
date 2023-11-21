@@ -1,6 +1,6 @@
 package com.oncoderm.spring.infra;
 
-import com.oncoderm.spring.dtos.ExceptionDTO;
+import com.oncoderm.spring.domain.exception.ExceptionDTO;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
