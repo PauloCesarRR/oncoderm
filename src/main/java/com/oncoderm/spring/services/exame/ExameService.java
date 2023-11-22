@@ -2,7 +2,7 @@ package com.oncoderm.spring.services.exame;
 
 import com.oncoderm.spring.domain.exame.Exame;
 import com.oncoderm.spring.domain.exame.ExameDTO;
-import com.oncoderm.spring.factories.UsuarioFactory;
+import com.oncoderm.spring.factories.ExameFactory;
 import com.oncoderm.spring.repositories.IExameRepository;
 import com.oncoderm.spring.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,30 +14,31 @@ import java.util.List;
 public class ExameService implements IExameService {
 
     @Autowired
-    private UsuarioFactory factory;
+    private ExameFactory factory;
 
     @Autowired
     private IExameRepository repository;
 
     @Override
-    public Exame create(ExameDTO exameDTO) throws Exception {
-        return null;
+    public Exame create(ExameDTO data) throws Exception {
+        Exame exame = factory.create(data);
+        return this.save(exame);
     }
 
     @Override
     public Exame save(Exame exame) throws Exception {
-        return null;
+        return this.repository.save(exame);
     }
 
     @Override
-    public Exame update(Integer id, ExameDTO exameDTO) throws Exception {
+    public Exame update(Integer id, ExameDTO data) throws Exception {
         Exame exame = repository.findById(id).orElse(null);
         if(exame == null) {
             return null;
         }
 
-        Utils.copyNonNullProperties(exameDTO, exame);
-        return repository.save(exame);
+        Utils.copyNonNullProperties(data, exame);
+        return this.repository.save(exame);
     }
 
     @Override
