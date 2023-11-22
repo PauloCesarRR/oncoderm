@@ -14,7 +14,6 @@ import java.util.List;
 @RequestMapping("/usuario")
 public class UsuarioController {
 
-    @SuppressWarnings("SpringJavaAutowiredFieldsWarningInspection")
     @Autowired
     private IUsuarioService service;
 
