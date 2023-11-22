@@ -1,17 +1,13 @@
 package com.oncoderm.spring.factories;
 
-import com.oncoderm.spring.domain.usuario.Usuario;
-import com.oncoderm.spring.domain.usuario.UsuarioDTO;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import com.oncoderm.spring.domain.medidaspreventivas.MedidasPreventivas;
+import com.oncoderm.spring.domain.medidaspreventivas.MedidasPreventivasDTO;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MedidasPreventivasFactory {
-    public Usuario create(UsuarioDTO data) {
-        Usuario novoUsuario = new Usuario(data);
-        String encryptedPassword = new BCryptPasswordEncoder().encode(data.senha());
-        novoUsuario.setSenha(encryptedPassword);
-
-        return novoUsuario;
+    public MedidasPreventivas create(MedidasPreventivasDTO data) {
+        MedidasPreventivas newMedidasPreventivas = new MedidasPreventivas(data);
+        return newMedidasPreventivas;
     }
 }

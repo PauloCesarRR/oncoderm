@@ -42,4 +42,14 @@ public class Diagnostico {
     @JoinColumn(name = "exame_id")
     private Exame exame;
 
+    public Diagnostico(DiagnosticoDTO data) {
+        this.data = data.data();
+        this.cancer = data.cancer();
+        this.recomendacao = data.recomendacao();
+        this.tipoCancer = data.tipoCancer();
+        this.tipoTratamento = data.tipoTratamento();
+        this.estagio = data.estagio();
+        this.exame = data.exame();
+    }
+
 }

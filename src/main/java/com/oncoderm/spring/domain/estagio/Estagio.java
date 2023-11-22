@@ -22,4 +22,10 @@ public class Estagio {
     @JoinColumn(name = "tipo_cancer_id")
     private TipoCancer tipoCancer;
 
+    public Estagio(EstagioDTO data) {
+        this.nome = data.nome();
+        this.descricao = data.descricao();
+        this.tipoCancer = data.tipoCancer();
+    }
+
 }

@@ -2,7 +2,6 @@ package com.oncoderm.spring.factories;
 
 import com.oncoderm.spring.domain.diagnostico.Diagnostico;
 import com.oncoderm.spring.domain.diagnostico.DiagnosticoDTO;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component

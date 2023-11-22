@@ -1,17 +1,13 @@
 package com.oncoderm.spring.factories;
 
-import com.oncoderm.spring.domain.usuario.Usuario;
-import com.oncoderm.spring.domain.usuario.UsuarioDTO;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import com.oncoderm.spring.domain.tipocancer.TipoCancer;
+import com.oncoderm.spring.domain.tipocancer.TipoCancerDTO;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TipoCancerFactory {
-    public Usuario create(UsuarioDTO data) {
-        Usuario novoUsuario = new Usuario(data);
-        String encryptedPassword = new BCryptPasswordEncoder().encode(data.senha());
-        novoUsuario.setSenha(encryptedPassword);
-
-        return novoUsuario;
+    public TipoCancer create(TipoCancerDTO data) {
+        TipoCancer newTipoCancer = new TipoCancer(data);
+        return newTipoCancer;
     }
 }

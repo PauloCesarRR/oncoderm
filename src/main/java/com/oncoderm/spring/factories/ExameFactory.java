@@ -1,17 +1,13 @@
 package com.oncoderm.spring.factories;
 
-import com.oncoderm.spring.domain.usuario.Usuario;
-import com.oncoderm.spring.domain.usuario.UsuarioDTO;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import com.oncoderm.spring.domain.exame.Exame;
+import com.oncoderm.spring.domain.exame.ExameDTO;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ExameFactory {
-    public Usuario create(UsuarioDTO data) {
-        Usuario novoUsuario = new Usuario(data);
-        String encryptedPassword = new BCryptPasswordEncoder().encode(data.senha());
-        novoUsuario.setSenha(encryptedPassword);
-
-        return novoUsuario;
+    public Exame create(ExameDTO data) {
+        Exame novoExame = new Exame(data);
+        return novoExame;
     }
 }
