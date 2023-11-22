@@ -1,17 +1,15 @@
 package com.oncoderm.spring.factories;
 
-import com.oncoderm.spring.domain.usuario.Usuario;
-import com.oncoderm.spring.domain.usuario.UsuarioDTO;
+import com.oncoderm.spring.domain.diagnostico.Diagnostico;
+import com.oncoderm.spring.domain.diagnostico.DiagnosticoDTO;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DiagnosticoFactory {
-    public Usuario create(UsuarioDTO data) {
-        Usuario novoUsuario = new Usuario(data);
-        String encryptedPassword = new BCryptPasswordEncoder().encode(data.senha());
-        novoUsuario.setSenha(encryptedPassword);
+    public Diagnostico create(DiagnosticoDTO data) {
+        Diagnostico novodiagnostico = new Diagnostico(data);
 
-        return novoUsuario;
+        return novodiagnostico;
     }
 }

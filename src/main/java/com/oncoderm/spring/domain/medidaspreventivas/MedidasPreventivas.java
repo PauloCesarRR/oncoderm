@@ -2,7 +2,7 @@ package com.oncoderm.spring.domain.medidaspreventivas;
 
 import com.oncoderm.spring.domain.prevencao.Prevencao;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 @Data
 @Entity
@@ -19,5 +19,10 @@ public class MedidasPreventivas {
     @ManyToOne
     @JoinColumn(name = "prevencao_id")
     private Prevencao prevencao;
+
+    public MedidasPreventivas(MedidasPreventivasDTO data){
+        this.descricao = data.descricao();
+        this.prevencao = data.prevencao();
+    }
 
 }

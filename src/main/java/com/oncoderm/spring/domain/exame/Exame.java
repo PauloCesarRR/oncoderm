@@ -34,4 +34,14 @@ public class Exame {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
+    public Exame(ExameDTO data) {
+        this.dataExame = data.dataExame();
+        this.descricao = data.descricao();
+        this.assimetrico = data.assimetrico();
+        this.bordas = data.bordas();
+        this.cor = data.cor();
+        this.diametro = data.diametro();
+        this.usuario = data.usuario();
+    }
+
 }

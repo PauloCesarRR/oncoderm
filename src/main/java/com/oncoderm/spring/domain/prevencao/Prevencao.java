@@ -15,4 +15,8 @@ public class Prevencao {
 
     private String nome;
 
+    public Prevencao(PrevencaoDTO data) {
+        this.nome = data.nome();
+    }
+
 }

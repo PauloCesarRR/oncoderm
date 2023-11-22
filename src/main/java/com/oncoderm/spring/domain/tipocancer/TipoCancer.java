@@ -2,7 +2,7 @@ package com.oncoderm.spring.domain.tipocancer;
 
 import com.oncoderm.spring.domain.prevencao.Prevencao;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 @Data
 @Entity
@@ -27,5 +27,13 @@ public class TipoCancer {
 
     @Column(name = "taxa_mortalidade")
     private Float taxaMortalidade;
+
+    public TipoCancer(TipoCancerDTO data) {
+        this.nome = data.nome();
+        this.descricao = data.descricao();
+        this.sintomaPrincipal = data.sintomaPrincipal();
+        this.prevencao = data.prevencao();
+        this.taxaMortalidade = data.taxaMortalidade();
+    }
 
 }

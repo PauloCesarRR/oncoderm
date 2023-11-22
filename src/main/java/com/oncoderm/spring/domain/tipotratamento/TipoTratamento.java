@@ -1,10 +1,14 @@
 package com.oncoderm.spring.domain.tipotratamento;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
-@Data
-@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of="id")
+@Entity(name = "tipo_tratamento")
 @Table(name = "tipo_tratamento")
 public class TipoTratamento {
 
@@ -16,5 +20,12 @@ public class TipoTratamento {
     private String nome;
 
     private String descricao;
+
+    public TipoTratamento(TipoTratamentoDTO data) {
+        this.nome = data.nome();
+        this.descricao = data.descricao();
+    }
+
+
 
 }
