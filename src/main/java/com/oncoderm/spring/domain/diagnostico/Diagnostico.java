@@ -5,7 +5,11 @@ import com.oncoderm.spring.domain.tipocancer.TipoCancer;
 import com.oncoderm.spring.domain.tipotratamento.TipoTratamento;
 import com.oncoderm.spring.domain.exame.Exame;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
@@ -55,5 +59,4 @@ public class Diagnostico {
         this.estagio = data.estagio();
         this.exame = data.exame();
     }
-
 }
