@@ -5,12 +5,16 @@ import com.oncoderm.spring.domain.tipocancer.TipoCancer;
 import com.oncoderm.spring.domain.tipotratamento.TipoTratamento;
 import com.oncoderm.spring.domain.exame.Exame;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDate;
 
-@Data
-@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of="id")
+@Entity(name = "diagnostico")
 @Table(name = "diagnostico")
 public class Diagnostico {
 
