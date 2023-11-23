@@ -1,10 +1,14 @@
 package com.oncoderm.spring.domain.prevencao;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
-@Data
-@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of="id")
+@Entity(name = "prevencao")
 @Table(name = "prevencao")
 public class Prevencao {
 

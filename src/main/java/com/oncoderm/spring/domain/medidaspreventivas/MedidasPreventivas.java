@@ -4,8 +4,12 @@ import com.oncoderm.spring.domain.prevencao.Prevencao;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Data
-@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of="id")
+@Entity(name = "medidas_preventivas")
 @Table(name = "medidas_preventivas")
 public class MedidasPreventivas {
 

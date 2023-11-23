@@ -2,10 +2,14 @@ package com.oncoderm.spring.domain.estagio;
 
 import com.oncoderm.spring.domain.tipocancer.TipoCancer;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
-@Data
-@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of="id")
+@Entity(name = "estagio")
 @Table(name = "estagio")
 public class Estagio {
 

@@ -2,12 +2,16 @@ package com.oncoderm.spring.domain.exame;
 
 import com.oncoderm.spring.domain.usuario.Usuario;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDate;
 
-@Data
-@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of="id")
+@Entity(name = "exames")
 @Table(name = "exames")
 public class Exame {
 
